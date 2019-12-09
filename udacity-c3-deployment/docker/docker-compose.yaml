@@ -37,6 +37,6 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
   frontend:
-    image: obeshor/udacity-frontend:local
+    image: obeshor/udacity-restapi-frontend
     ports:
       - "8100:80"
