@@ -1,7 +1,7 @@
 version: "3"
 services:
   reverseproxy:
-      image: scheele/reverseproxy
+      image: obeshor/reverseproxy
       ports:
           - 8080:8080
       restart: always
