@@ -15,7 +15,7 @@ spec:
         app: reverseproxy
     spec:
       containers:
-      - image: obeshor/udacity-reverseproxy
+      - image: obeshor/reverseproxy
         name: reverseproxy
         imagePullPolicy: Always          
         resources:

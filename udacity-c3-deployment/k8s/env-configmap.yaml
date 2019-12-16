@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  AWS_BUCKET: udagram-ruttner-dev001
+  AWS_PROFILE: udagram-gabe-dev
+  AWS_REGION: eu-west-2
+  JWT_SECRET: helloworld
+  POSTGRESS_DB: udagramruttnerdev
+  POSTGRESS_HOST: udagramruttnerdev.cgnicli792my.eu-west-2.rds.amazonaws.com
+  URL: http://localhost:8100  
+metadata:
+  name: env-config
