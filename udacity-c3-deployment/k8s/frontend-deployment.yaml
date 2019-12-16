@@ -16,7 +16,7 @@ spec:
         api: external        
     spec:
       containers:
-      - image:  obeshor/udacity-restapi-frotend
+      - image:  obeshor/udacity-restapi-frontend
         name: frontend
         imagePullPolicy: Always          
         ports:
