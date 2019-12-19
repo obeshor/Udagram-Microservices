@@ -6,13 +6,13 @@ services:
     image: obeshor/reverseproxy 
   backend_user:
     build:
-      context: ../../restapi-user
+      context: ../../udacity-c3-restapi-user
     image: obeshor/udacity-restapi-user
   backend_feed:
     build:
-      context: ../../restapi-feed  
+      context: ../../udacity-c3-restapi-feed   
     image: obeshor/udacity-restapi-feed
   frontend:
     build:
-      context: ../../frontend  
+      context: ../../udacity-c3-frontend  
     image: obeshor/udacity-restapi-frontend
