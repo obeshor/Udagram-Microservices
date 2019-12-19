@@ -8,6 +8,7 @@ Monolith to Microservices at Scale Project
 - Install [eksctl & aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html)
 
 #### Setup docker enviroment
+- Switch the folder: `cd udacity-c3-deployment/docker`
 - Build the images: `docker-compose -f docker-compose-build.yaml  build --parallel`
 - Run the containers: `docker-compose up`
 - Push the images: `docker-compose -f docker-compose-build.yaml push`
