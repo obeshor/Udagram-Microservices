@@ -34,7 +34,9 @@ eksctl create cluster  --name YOUR_CLUSTER_NAME --version 1.14 --nodegroup-name 
     - `echo POSTGRESS_USERNAME | base64`
 - Encrypt the aws file using base64 using the following commands
     - `cat ~/.aws/credentials | base64` 
+- You can also use the website [Base64 Encode and Decode](https://www.base64encode.org/) to encode your variables.
 - Add these values in the appropriate places in `env-secret.yaml`, `aws-secret.yaml`, and `env-configmap.yaml` 
+
 #### Setup Kubernetes Environment
 Note that you need to apply the configurations in the `/deployments/k8s/` directory 
 - Load secret files: 
@@ -43,21 +45,20 @@ Note that you need to apply the configurations in the `/deployments/k8s/` direct
 	- `kubectl apply -f env-secret.yaml`
 	- `kubectl apply -f env-configmap.yaml`
 - Apply all other yaml files:
-    - ` remember to run first frontend, feed and user, before running reverseproxy`
+    - `Remember to run first frontend, feed and user, before running reverseproxy`
     - `kubectl apply -f .`
 
 #### Check pods status
--   `kubectl get all`
+-   `kubectl get all : to see pods, services, deployments and replicasets `
 
 #### Connect the services with port forwarding
-- Use port forwarding to the frontend and reverse proxy services:
-    - `Note: The port forwarding must be done in separate terminals, otherwise, it won't work.`
+- Use port forwarding to the frontend and reverse proxy services, note that : The port forwarding must be done in separate terminals, otherwise, it won't work.
 	- `kubectl port-forward service/frontend 8100:8100`
 	- `kubectl port-forward service/reverseproxy 8080:8080`
 
 ### CD/CI 
 
 The CI tool used here is Travis CI
-- Sign up for [TravisCI](https://travis-ci.com/) and connect your Github repository to TrivisCL
+- Sign up for [TravisCI](https://travis-ci.com/) and connect your Github repository to TravisCI
 - Add `.travis.yml` file to the git repository
 A new commit to this repository will create an automatic build.
